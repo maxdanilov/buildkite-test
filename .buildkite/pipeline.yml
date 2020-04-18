@@ -6,7 +6,7 @@ steps:
     - wait
 
     - block: "Deploy"
-    prompt: "Deploy to production?"
+      prompt: "Deploy to production?"
 
     - label: "🚀"
       trigger: "my-app-deploy"
