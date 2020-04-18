@@ -2,3 +2,11 @@ steps:
     - label: ":hammer: Example Script"
       command: "./scripts.sh"
     #   artifact_paths: "artifacts/*"
+
+    - wait
+
+    - label: "🚀"
+      trigger: "my-app-deploy"
+      if: build.branch == 'master'
+      build:
+        commit: "$BUILDKITE_COMMIT"
