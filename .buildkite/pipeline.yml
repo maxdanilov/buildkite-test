@@ -13,3 +13,12 @@ steps:
       if: build.branch == 'master'
       build:
         commit: "$BUILDKITE_COMMIT"
+
+    - block: "Deploy again!!!"
+      prompt: "Deploy to production?"
+
+    - label: ":trollface:"
+      trigger: "my-app-deploy"
+      if: build.branch == 'master'
+      build:
+        commit: "$BUILDKITE_COMMIT"
